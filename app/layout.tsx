@@ -1,12 +1,16 @@
-// app/layout.tsx
 import './globals.css';
+import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Outfit Builder',
   description: 'Create and shop virtual outfits',
 };
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>{children}</body>
